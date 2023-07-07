@@ -49,10 +49,10 @@
             }
             .headshot-border {
                 position: absolute;
-                width: 25px;
-                height: 25px;
+                width: 28px;
+                height: 28px;
                 border-bottom-right-radius: 28px;
-                box-shadow: 10px 10px 0 10px var(--color-background);
+                box-shadow: 5px 5px 0 5px var(--color-background);
                 background-color: #3959DC;
             }
             .headshot-border-top {
@@ -64,7 +64,10 @@
                 right: 100px;
             }
             img {
-                width: 75px;
+                width: 90px;
+                position: relative;
+                left: 5px;
+                top: 5px;
                 border-radius: 100%;
             }
         }

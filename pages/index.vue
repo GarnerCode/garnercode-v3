@@ -1,6 +1,7 @@
 <template>
   <div class="view-container">
     <Landing></Landing>
+    <Feature></Feature>
   </div>
 </template>
 

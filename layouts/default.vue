@@ -13,6 +13,7 @@
         --color-text: black;
         --color-panel: #FFFFFF;
 
+        --color-white: #F5F5F7;
         --border-radius: 28px;
         --font-family-primary: 'Nunito', sans-serif;
         --font-family-secondary: 'PT Sans', sans-serif;

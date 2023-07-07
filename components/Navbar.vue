@@ -29,8 +29,12 @@
                 <div class="button button-theme">Contact</div>
             </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
-                <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">L</div>
-                <div class="mode-toggle-button" :class="{'active': userTheme === 'dark-theme'}">D</div>
+                <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
+                    <font-awesome-icon icon="fa-solid fa-sun" />
+                </div>
+                <div class="mode-toggle-button" :class="{'active': userTheme === 'dark-theme'}">
+                    <font-awesome-icon icon="fa-solid fa-moon" />
+                </div>
             </div>
         </div>
     </div>
