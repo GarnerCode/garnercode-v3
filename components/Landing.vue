@@ -5,7 +5,12 @@
             <h1>I'm a <span class="highlight">Web Developer</span></h1>
             <p>I bring ideas to life on the web.</p>
         </div>
-        <button class="button button-primary">Contact Me</button>
+        <button class="button button-primary">
+            <div>Contact Me</div>
+            <div class="icon-container">
+                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+            </div>
+        </button>
         <div class="headshot-border headshot-border-top"></div>
         <div class="headshot-border headshot-border-left"></div>
         <div class="headshot-container">
@@ -33,6 +38,31 @@
             }
             p {
                 color: white;
+            }
+            .button {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 3rem;
+                position: relative;
+                z-index: 6;
+                height: 40px;
+                .icon-container {
+                    background-color: var(--color-white);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    top: -0.5rem;
+                    right: -1rem;
+                    svg {
+                        color: black;
+                    }
+                }
             }
             .headshot-container {
                 width: 100px;

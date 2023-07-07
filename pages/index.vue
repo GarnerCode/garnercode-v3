@@ -1,7 +1,9 @@
 <template>
   <div class="view-container">
     <Landing></Landing>
-    <Feature></Feature>
+    <!-- <FeaturePrimary></FeaturePrimary>
+    <FeatureSecondary></FeatureSecondary> -->
+    <FeaturedProjects></FeaturedProjects>
   </div>
 </template>
 

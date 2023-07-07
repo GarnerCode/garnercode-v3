@@ -1,11 +1,11 @@
 <template>
-    <section id="feature" class="panel">
+    <section id="feature-secondary" class="panel">
         <div class="feature-text">
-            <h2>Invoicer</h2>
-            <p>Invoicing web application</p>
+            <h2>Arch</h2>
+            <p>Static website for an architecture firm</p>
         </div>
-        <img src="images/invoicer.webp" alt="">
-        <a href="https://invoicer-blue.vercel.app/" target="_blank" class="feature-link">
+        <img src="images/arch.webp" alt="">
+        <a href="https://arch-olive.vercel.app/" target="_blank" class="feature-link">
             <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
         </a>
     </section>
@@ -13,11 +13,11 @@
 
 <style lang="scss">
     @media screen and (min-width: 0px) {
-        #feature {
+        #feature-secondary {
             margin: 1rem;
             border-radius: var(--border-radius);
             position: relative;
-            color: var(--color-white);
+            color: black;
             .feature-text {
                 position: absolute;
                 top: 0.75rem;
@@ -31,7 +31,7 @@
                 position: absolute;
                 top: 0.75rem;
                 right: 0.75rem;
-                background-color: var(--color-white);
+                background-color: black;
                 width: 40px;
                 height: 40px;
                 display: flex;
@@ -40,7 +40,7 @@
                 align-items: center;
                 border-radius: 100%;
                 svg {
-                    color: black;
+                    color: var(--color-white);
                 }
             }
         }
