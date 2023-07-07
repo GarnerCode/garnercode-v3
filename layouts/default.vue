@@ -13,7 +13,9 @@
         --color-text: black;
         --color-panel: #FFFFFF;
 
-        --border-radius: 50px;
+        --border-radius: 28px;
+        --font-family-primary: 'Nunito', sans-serif;
+        --font-family-secondary: 'PT Sans', sans-serif;
     }
     :root.dark-theme {
         --color-background: black;
@@ -24,6 +26,42 @@
         background-color: var(--color-background);
         color: var(--color-text);
         margin: 0;
+        font-family: var(--font-family-secondary);
+    }
+    .view-container {
+        margin-top: calc(2rem + 56px);
+    }
+    h1, h2, h3 {
+        font-family: var(--font-family-primary);
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+    .panel {
+        border-radius: var(--border-radius);
+    }
+    .button {
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 28px;
+        font-family: var(--font-family-primary);
+        font-size: 1.25rem;
+        width: fit-content;
+        cursor: pointer;
+        &.button-theme {
+            background-color: var(--color-text);
+            color: var(--color-background);
+        }
+        &.button-primary {
+            background-color: black;
+            color: #F5F5F7;
+        }
+    }
+    @media screen and (min-width: 0px) {
+        h1 {
+            font-size: 2rem;
+        }
     }
 </style>
 

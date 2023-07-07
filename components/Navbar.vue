@@ -20,13 +20,13 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <div class="nav-overlay" v-if="navToggled"></div>
+        <div class="nav-overlay" @click="navToggled = false" v-if="navToggled"></div>
         <div class="nav-menu" v-if="navToggled">
             <div class="nav-items">
                 <div>Home</div>
                 <div>About</div>
                 <div>Portfolio</div>
-                <div>Contact</div>
+                <div class="button button-theme">Contact</div>
             </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
                 <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">L</div>
@@ -39,7 +39,7 @@
 <style lang="scss">
     @media screen and (min-width: 0px) {
         nav {
-            border-radius: 28px;
+            border-radius: var(--border-radius);
             background-color: var(--color-panel);
             padding: 0.5rem 0.5rem;
             margin: 1rem;
@@ -48,7 +48,10 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100vw - 3rem);
             z-index: 10;
             &.active {
                 border-bottom-left-radius: 0;
@@ -113,14 +116,17 @@
         }
         .nav-menu {
             background-color: var(--color-panel);
-            border-radius: 28px;
+            border-radius: var(--border-radius);
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             margin: 1rem;
             margin-top: 0;
             padding: 0.5rem;
-            font-size: 1.5rem;
-            position: relative;
+            font-family: var(--font-family-primary);
+            position: absolute;
+            top: calc(1rem + 56px);
+            width: calc(100vw - 3rem);
+            left: 0;
             z-index: 10;
             display: flex;
             flex-direction: row;
@@ -130,10 +136,14 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
+                div {
+                    font-size: 1.25rem;
+                    padding: 0.5rem 1rem;
+                }
             }
             .mode-toggle {
                 background-color: var(--color-background);
-                border-radius: 28px;
+                border-radius: var(--border-radius);
                 .mode-toggle-button {
                     width: 40px;
                     height: 40px;

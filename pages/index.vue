@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="view-container">
+    <Landing></Landing>
+  </div>
 </template>
 
 <script lang="ts">
