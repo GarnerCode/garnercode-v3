@@ -26,6 +26,13 @@
       }
     }
   }
+  @media screen and (min-width: 1400px) {
+    .view-container {
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 </style>
 
 <script lang="ts">

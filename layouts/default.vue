@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="app">
         <Navbar :userTheme="userTheme"></Navbar>
         <main>
             <Nuxt/>

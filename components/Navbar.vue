@@ -18,6 +18,7 @@
                 <div>Home</div>
                 <div>About</div>
                 <div>Portfolio</div>
+                <div>Contact</div>
                 <div class="button button-theme">Resume</div>
             </div>
             <div class="mode-toggle desktop-mode-toggle" @click="emitThemeEvent()">
@@ -40,6 +41,7 @@
                 <div>Home</div>
                 <div>About</div>
                 <div>Portfolio</div>
+                <div>Contact</div>
                 <div class="button button-theme">Resume</div>
             </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
@@ -163,6 +165,14 @@
                 div {
                     font-size: 1.25rem;
                     padding: 0.5rem 1rem;
+                    &.button {
+                        height: 40px;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -196,10 +206,27 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 2rem;
+                .button {
+                    height: 40px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
             .desktop-mode-toggle {
                 display: flex;
+                cursor: pointer;
             }
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        nav {
+            width: calc(1000px - 3rem);
+            margin: 1rem auto;
+            left: 0;
+            right: 0;
         }
     }
 </style>
