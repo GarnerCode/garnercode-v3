@@ -102,4 +102,10 @@
             }
         }
     }
+    @media screen and (min-width: 768px) {
+        #landing {
+            width: 50%;
+            margin: 0 1rem;
+        }
+    }
 </style>

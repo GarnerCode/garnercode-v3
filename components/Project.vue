@@ -14,7 +14,7 @@
 <style lang="scss">
     @media screen and (min-width: 0px) {
         .project-panel {
-            margin: 1rem;
+            margin: 0;
             border-radius: var(--border-radius);
             position: relative;
             color: black;
@@ -52,6 +52,11 @@
                     color: var(--color-white);
                 }
             }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .project-panel {
+            width: calc(50% - 0.5rem);
         }
     }
 </style>

@@ -14,6 +14,20 @@
                     </g>
                 </svg>
             </div>
+            <div class="nav-links">
+                <div>Home</div>
+                <div>About</div>
+                <div>Portfolio</div>
+                <div class="button button-theme">Resume</div>
+            </div>
+            <div class="mode-toggle desktop-mode-toggle" @click="emitThemeEvent()">
+                <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
+                    <font-awesome-icon icon="fa-solid fa-sun" />
+                </div>
+                <div class="mode-toggle-button" :class="{'active': userTheme === 'dark-theme'}">
+                    <font-awesome-icon icon="fa-solid fa-moon" />
+                </div>
+            </div>
             <div class="nav-toggle" @click="navToggled = !navToggled" :class="{'toggled': navToggled}">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -26,7 +40,7 @@
                 <div>Home</div>
                 <div>About</div>
                 <div>Portfolio</div>
-                <div class="button button-theme">Contact</div>
+                <div class="button button-theme">Resume</div>
             </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
                 <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
@@ -76,6 +90,12 @@
                 .cls-2 {
                     fill: var(--color-text);
                 }
+            }
+            .nav-links {
+                display: none;
+            }
+            .desktop-mode-toggle {
+                display: none;
             }
             .nav-toggle {
                 background-color: var(--color-text);
@@ -145,24 +165,40 @@
                     padding: 0.5rem 1rem;
                 }
             }
-            .mode-toggle {
-                background-color: var(--color-background);
-                border-radius: var(--border-radius);
-                .mode-toggle-button {
-                    width: 40px;
-                    height: 40px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: var(--color-background);
-                    color: var(--color-text);
-                    border-radius: 100%;
-                    &.active {
-                        background-color: var(--color-text);
-                        color: var(--color-background);
-                    }
-                }
+        }
+        .mode-toggle {
+            background-color: var(--color-background);
+            border-radius: var(--border-radius);
+        }
+        .mode-toggle-button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            border-radius: 100%;
+            &.active {
+                background-color: var(--color-text);
+                color: var(--color-background);
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        nav {
+            .nav-toggle {
+                display: none;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+            }
+            .desktop-mode-toggle {
+                display: flex;
             }
         }
     }

@@ -59,6 +59,14 @@
             color: #F5F5F7;
         }
     }
+    .panel-header {
+        color: var(--color-white);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-white);
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
     @media screen and (min-width: 0px) {
         h1 {
             font-size: 2rem;
