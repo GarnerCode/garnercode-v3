@@ -16,7 +16,7 @@
 <style lang="scss">
     #experience {
         .experience-panel {
-            background-color: #3959DC;
+            background: var(--color-primary);
             color: var(--color-white);
             margin: 1rem;
             padding: 0.75rem;

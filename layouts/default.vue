@@ -14,20 +14,24 @@
         --color-panel: #FFFFFF;
 
         --color-white: #F5F5F7;
+        --color-primary: #3959DC;
         --border-radius: 28px;
         --font-family-primary: 'Nunito', sans-serif;
         --font-family-secondary: 'PT Sans', sans-serif;
+        --transition: all 0.25s ease-in-out;
     }
     :root.dark-theme {
         --color-background: black;
         --color-text: #F5F5F7;
         --color-panel: #111111;
+        --gradient: linear-gradient(145deg, rgba(26,5,47,1) 0%, rgba(0,0,0,1) 50%, rgba(26,5,47,1) 100%);
     }
     body {
         background-color: var(--color-background);
         color: var(--color-text);
         margin: 0;
         font-family: var(--font-family-secondary);
+        transition: var(--transition);
     }
     .view-container {
         margin-top: calc(2rem + 56px);
@@ -54,6 +58,15 @@
             background-color: var(--color-text);
             color: var(--color-background);
         }
+        &.button-theme-secondary {
+            border: 1px solid var(--color-text);
+            color: var(--color-text);
+            transition: var(--transition);
+            &:hover {
+                background-color: var(--color-text);
+                color: var(--color-background);
+            }
+        }
         &.button-primary {
             background-color: black;
             color: #F5F5F7;
@@ -66,6 +79,16 @@
         padding: 0.5rem 1rem;
         width: fit-content;
         margin-bottom: 1rem;
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(3rem);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     @media screen and (min-width: 0px) {
         h1 {

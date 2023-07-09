@@ -21,9 +21,17 @@
             &.light-text {
                 color: var(--color-white);
                 .feature-link {
-                    background-color: var(--color-white);
+                    background: none;
+                    border: 1px solid var(--color-white);
+                    &:hover {
+                        background-color: var(--color-white);
+                        svg {
+                            color: black;
+                        }
+                    }
                     svg {
-                        color: black;
+                        color: var(--color-white);
+                        transition: var(--transition);
                     }
                 }
             }
@@ -40,7 +48,8 @@
                 position: absolute;
                 top: 0.75rem;
                 right: 0.75rem;
-                background-color: black;
+                background: none;
+                border: 1px solid black;
                 width: 40px;
                 height: 40px;
                 display: flex;
@@ -48,8 +57,17 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 100%;
+                transition: var(--transition);
+                &:hover {
+                    transform: scale(115%);
+                    background-color: black;
+                    svg {
+                        color: var(--color-white);
+                    }
+                }
                 svg {
-                    color: var(--color-white);
+                    color: black;
+                    transition: var(--transition);
                 }
             }
         }

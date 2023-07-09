@@ -20,9 +20,25 @@
 </template>
 
 <style lang="scss">
+@keyframes scaleButtonIn {
+    from {
+        width: 222px;
+    }
+    to {
+        width: 400px;
+    }
+}
+@keyframes scaleButtonOut {
+    from {
+        width: 400px;
+    }
+    to {
+        width: 222px;
+    }
+}
     @media screen and (min-width: 0px) {
         #landing {
-            background-color: #3959DC;
+            background-color: var(--color-primary);
             padding: 0.75rem;
             margin: 1rem;
             display: flex;
@@ -30,6 +46,8 @@
             justify-content: space-between;
             gap: 3rem;
             position: relative;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
             h1 {
                 color: #98B8E7;
                 .highlight {
@@ -76,6 +94,7 @@
                 bottom: 0;
                 right: 0;
                 border-top-left-radius: 50px;
+                transition: var(--transition);
             }
             .headshot-border {
                 position: absolute;
@@ -83,7 +102,8 @@
                 height: 28px;
                 border-bottom-right-radius: 28px;
                 box-shadow: 5px 5px 0 5px var(--color-background);
-                background-color: #3959DC;
+                background-color: var(--color-primary);
+                transition: var(--transition);
             }
             .headshot-border-top {
                 bottom: 100px;
@@ -106,6 +126,17 @@
         #landing {
             width: 50%;
             margin: 0 1rem;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        #landing {
+            .button {
+                transition: var(--transition);
+                animation: scaleButtonOut 0.25s ease-in-out forwards;
+                &:hover {
+                    animation: scaleButtonIn 0.25s ease-in-out forwards;
+                }
+            }
         }
     }
 </style>

@@ -19,7 +19,7 @@
                 <div>About</div>
                 <div>Portfolio</div>
                 <div>Contact</div>
-                <div class="button button-theme">Resume</div>
+                <div class="button button-theme-secondary">Resume</div>
             </div>
             <div class="mode-toggle desktop-mode-toggle" @click="emitThemeEvent()">
                 <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
@@ -36,13 +36,13 @@
             </div>
         </nav>
         <div class="nav-overlay" @click="navToggled = false" v-if="navToggled"></div>
-        <div class="nav-menu" v-if="navToggled">
+        <div class="nav-menu" v-if="navToggled" :class="{'toggled': navToggled}">
             <div class="nav-items">
                 <div>Home</div>
                 <div>About</div>
                 <div>Portfolio</div>
                 <div>Contact</div>
-                <div class="button button-theme">Resume</div>
+                <div class="button button-theme-secondary">Resume</div>
             </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
                 <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
@@ -88,9 +88,11 @@
                     fill: var(--color-background);
                     width: 40px;
                     height: 40px;
+                    transition: var(--transition);
                 }
                 .cls-2 {
                     fill: var(--color-text);
+                    transition: var(--transition);
                 }
             }
             .nav-links {
@@ -206,6 +208,10 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 2rem;
+                font-size: 20px;
+                div {
+                    cursor: pointer;
+                }
                 .button {
                     height: 40px;
                     padding-top: 0;

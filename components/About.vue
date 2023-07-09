@@ -31,6 +31,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 0.75s forwards;
+            transition: var(--transition);
             .panel-header {
                 border: 1px solid var(--color-background);
                 color: var(--color-background);
@@ -62,6 +65,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    transition: var(--transition);
                 }
             }
             .about-link {
@@ -75,6 +79,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                transition: var(--transition);
             }
         }
     }

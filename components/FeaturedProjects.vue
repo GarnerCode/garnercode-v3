@@ -13,9 +13,12 @@
             display: block;
             gap: 1rem;
             margin: 1rem;
-            background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(50,50,50,1) 100%);
+            margin-bottom: 0;
+            background: #111111;
             padding: 0.75rem;
             border-radius: var(--border-radius);
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 1s forwards;
             .projects-container {
                 display: flex;
                 flex-direction: column;
