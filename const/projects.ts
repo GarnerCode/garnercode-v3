@@ -20,4 +20,11 @@ export const projects = [
         link: 'https://arch-olive.vercel.app/',
         lightText: false,
     },
+    {
+        title: 'Invoicer',
+        description: 'Invoicing web application',
+        image: 'invoicer.webp',
+        link: 'https://invoicer-blue.vercel.app/',
+        lightText: true,
+    },
 ]

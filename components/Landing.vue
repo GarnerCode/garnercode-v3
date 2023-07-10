@@ -49,7 +49,7 @@
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
             h1 {
-                color: #98B8E7;
+                color: var(--color-secondary);
                 .highlight {
                     color: white;
                 }

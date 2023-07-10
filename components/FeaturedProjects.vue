@@ -19,6 +19,7 @@
             border-radius: var(--border-radius);
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 1s forwards;
+            position: relative;
             .projects-container {
                 display: flex;
                 flex-direction: column;

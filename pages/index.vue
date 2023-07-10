@@ -5,7 +5,10 @@
       <About></About>
     </div>
     <FeaturedProjects></FeaturedProjects>
-    <Experience></Experience>
+    <div class="row">
+      <Experience></Experience>
+      <Skills></Skills>
+    </div>
   </div>
 </template>
 
