@@ -227,7 +227,7 @@
             }
         }
     }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 1000px) {
         nav {
             width: calc(1000px - 3rem);
             margin: 1rem auto;

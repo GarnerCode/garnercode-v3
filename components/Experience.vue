@@ -26,6 +26,8 @@
 <style lang="scss">
     @media screen and (min-width: 0px) {
         #experience {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 1.25s forwards;
             .experience-panel {
                 background: var(--color-white);
                 color: black;

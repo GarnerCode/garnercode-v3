@@ -29,7 +29,7 @@
       }
     }
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1000px) {
     .view-container {
       width: 1000px;
       margin-left: auto;

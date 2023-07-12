@@ -17,6 +17,8 @@
 <style lang="scss">
     @media screen and (min-width: 0px) {
         #skills {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 1.5s forwards;
             section {
                 background-color: #111111;
                 color: var(--color-white);

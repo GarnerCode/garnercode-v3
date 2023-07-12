@@ -110,9 +110,10 @@
         },
         mounted() {
             document.addEventListener('themeEvent', () => {
-                this.userTheme === "light-theme" ? this.setTheme("dark-theme") : this.setTheme("light-theme")
+                this.userTheme === "light-theme" ? this.setTheme("dark-theme") : this.setTheme("light-theme");
             });
-            const initialTheme = this.getMediaPreference();
+            let initialTheme = null as any;
+            this.getTheme() ? initialTheme = this.getTheme() : initialTheme = this.getMediaPreference();
             this.setTheme(initialTheme);
         },
         methods: {
