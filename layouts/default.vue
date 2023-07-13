@@ -11,7 +11,7 @@
     :root {
         --color-background: #e0e0e0;
         --color-text: black;
-        --color-panel: #FFFFFF;
+        --color-panel: #dadada;
 
         --color-white: #F5F5F7;
         --color-primary: #3959DC;
@@ -47,6 +47,14 @@
     .panel {
         border-radius: var(--border-radius);
     }
+    .panel-header {
+        color: var(--color-text);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-text);
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
     .button {
         border: none;
         padding: 0.5rem 1rem;
@@ -72,14 +80,6 @@
             background-color: black;
             color: #F5F5F7;
         }
-    }
-    .panel-header {
-        color: var(--color-white);
-        border-radius: var(--border-radius);
-        border: 1px solid var(--color-white);
-        padding: 0.5rem 1rem;
-        width: fit-content;
-        margin-bottom: 1rem;
     }
     @keyframes fadeInUp {
         from {

@@ -29,14 +29,10 @@
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 1.25s forwards;
             .experience-panel {
-                background: var(--color-white);
-                color: black;
+                background: var(--color-panel);
+                color: var(--color-text);
                 margin: 1rem;
                 padding: 0.75rem;
-            }
-            .panel-header {
-                color: black;
-                border-color: black;
             }
             .experience-item {
                 background-color: var(--color-primary);
@@ -67,7 +63,7 @@
                 height: 28px;
                 border-bottom-left-radius: var(--border-radius);
                 background-color: var(--color-primary);
-                box-shadow: -5px 5px 0 5px var(--color-white);
+                box-shadow: -5px 5px 0 5px var(--color-panel);
                 &.credit-img-border-top {
                     bottom: 100px;
                     left: 0;
@@ -83,7 +79,7 @@
                 left: 0;
                 width: 100px;
                 height: 100px;
-                background-color: var(--color-white);
+                background-color: var(--color-panel);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -115,6 +111,9 @@
     @media screen and (min-width: 768px) {
         #experience {
             width: calc(50% - 0.5rem);
+            .experience-panel {
+                margin-right: 0;
+            }
             .quote {
                 margin: 0;
                 margin-left: 100px;

@@ -21,8 +21,8 @@
             animation: fadeInUp 0.5s ease-in-out 1.5s forwards;
             height: fit-content;
             section {
-                background-color: #111111;
-                color: var(--color-white);
+                background-color: var(--color-panel);
+                color: var(--color-text);
                 padding: 0.75rem;
                 margin: 0 1rem;
             }
@@ -36,7 +36,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                background-color: black;
+                background-color: var(--color-background);
                 border-radius: var(--border-radius);
                 width: fit-content;
             }
@@ -60,8 +60,9 @@
     }
     @media screen and (min-width: 768px) {
         #skills {
-            width: calc(50% - 0.5rem);
+            width: calc(50% - 1.5rem);
             margin-top: 1rem;
+            margin-left: 1rem;
             section {
                 margin: 0;
             }

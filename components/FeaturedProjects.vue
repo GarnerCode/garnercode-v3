@@ -14,7 +14,7 @@
             gap: 1rem;
             margin: 1rem;
             margin-bottom: 0;
-            background: #111111;
+            background: var(--color-panel);
             padding: 0.75rem;
             border-radius: var(--border-radius);
             opacity: 0;

@@ -25,7 +25,7 @@
 <style lang="scss">
     @media screen and (min-width: 0px) {
         #about {
-            background-color: var(--color-text);
+            background-color: var(--color-panel);
             padding: 0.75rem;
             margin: 0 1rem;
             display: flex;
@@ -34,14 +34,10 @@
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 0.75s forwards;
             transition: var(--transition);
-            .panel-header {
-                border: 1px solid var(--color-background);
-                color: var(--color-background);
-            }
             .paragraphs {
                 margin-bottom: 1rem;
                 p {
-                    color: var(--color-background);
+                    color: var(--color-text);
                 }
             }
             .icons-row {
@@ -57,8 +53,9 @@
                     text-decoration: none;
                 }
                 .button {
-                    background-color: var(--color-background);
+                    background: none;
                     color: var(--color-text);
+                    border: 1px solid var(--color-text);
                     max-height: 40px;
                     padding-top: 0;
                     padding-bottom: 0;
@@ -66,6 +63,15 @@
                     flex-direction: column;
                     justify-content: center;
                     transition: var(--transition);
+                    &:hover {
+                        background-color: var(--color-text);
+                        color: var(--color-background);
+                    }
+                    &.about-link {
+                        &:hover {
+                            transform: scale(115%);
+                        }
+                    }
                 }
             }
             .about-link {
