@@ -8,14 +8,14 @@
         </div>
         <div class="icons-row">
             <div class="column">
-                <a href="#" class="button button-theme about-link">
+                <a href="https://github.com/GarnerCode" target="_blank" class="button button-theme about-link">
                     <font-awesome-icon icon="fa-brands fa-github" />
                 </a>
-                <a href="#" class="button button-theme about-link">
+                <a href="https://www.linkedin.com/in/tgarner98/" target="_blank" class="button button-theme about-link">
                     <font-awesome-icon icon="fa-brands fa-linkedin-in" />
                 </a>
             </div>
-            <a href="#" class="button button-theme">
+            <a href="https://drive.google.com/file/d/139KydJAvsLkpU2kU7fc9Nb8spMbqozbb/view?usp=sharing" target="_blank" class="button button-theme">
                 Resume
             </a>
         </div>

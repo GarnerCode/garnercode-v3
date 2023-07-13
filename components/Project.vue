@@ -5,9 +5,14 @@
             <p>{{ project.description }}</p>
         </div>
         <img :src="`images/${project.image}`" alt="">
-        <a :href="project.link" target="_blank" class="feature-link">
-            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-        </a>
+        <div class="project-links">
+            <a :href="project.link" target="_blank" class="feature-link">
+                <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+            </a>
+            <a :href="project.github" target="_blank" class="feature-link">
+                <font-awesome-icon icon="fa-brands fa-github" />
+            </a>
+        </div>
     </section>
 </template>
 
@@ -44,10 +49,15 @@
                 width: 100%;
                 border-radius: var(--border-radius);
             }
-            .feature-link {
+            .project-links {
                 position: absolute;
                 top: 0.75rem;
                 right: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .feature-link {
                 background: none;
                 border: 1px solid black;
                 width: 40px;

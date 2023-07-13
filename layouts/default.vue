@@ -25,7 +25,6 @@
         --color-background: black;
         --color-text: #F5F5F7;
         --color-panel: #111111;
-        --gradient: linear-gradient(145deg, rgba(26,5,47,1) 0%, rgba(0,0,0,1) 50%, rgba(26,5,47,1) 100%);
     }
     body {
         background-color: var(--color-background);

@@ -4,6 +4,7 @@ export const projects = [
         description: 'Invoicing web application',
         image: 'invoicer.webp',
         link: 'https://invoicer-blue.vercel.app/',
+        github: 'https://github.com/GarnerCode/invoicer',
         lightText: true,
     },
     {
@@ -11,6 +12,7 @@ export const projects = [
         description: 'E-commerce website',
         image: 'audiophile.webp',
         link: 'https://audiophile-nine-omega.vercel.app/',
+        github: 'https://github.com/GarnerCode/audiophile',
         lightText: true,
     },
     {
@@ -18,6 +20,7 @@ export const projects = [
         description: 'Static website for an architecture firm',
         image: 'arch.webp',
         link: 'https://arch-olive.vercel.app/',
+        github: 'https://github.com/GarnerCode/arch',
         lightText: false,
     },
     {
@@ -25,6 +28,7 @@ export const projects = [
         description: 'Invoicing web application',
         image: 'invoicer.webp',
         link: 'https://invoicer-blue.vercel.app/',
+        github: 'https://github.com/GarnerCode/invoicer',
         lightText: true,
     },
 ]
