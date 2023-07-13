@@ -41,6 +41,7 @@
             background-color: var(--color-primary);
             padding: 0.75rem;
             margin: 1rem;
+            margin-top: 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
