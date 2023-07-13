@@ -19,6 +19,7 @@
         #skills {
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 1.5s forwards;
+            height: fit-content;
             section {
                 background-color: #111111;
                 color: var(--color-white);
