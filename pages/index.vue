@@ -6,8 +6,19 @@
     </div>
     <FeaturedProjects></FeaturedProjects>
     <div class="row">
-      <Experience></Experience>
-      <Skills></Skills>
+      <div class="column">
+        <Experience></Experience>
+        <div class="hide-mobile">
+          <Contact></Contact>
+        </div>
+      </div>
+      <div class="column">
+        <Skills></Skills>
+        <div class="hide-tablet">
+          <Contact></Contact>
+        </div>
+        <ContactForm></ContactForm>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +29,16 @@
       .row {
         display: flex;
         flex-direction: column;
+        .column {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .hide-mobile {
+        display: none;
+      }
+      .hide-tablet {
+        display: block;
       }
     }
   }
@@ -26,6 +47,15 @@
       .row {
         flex-direction: row;
         flex-wrap: wrap;
+        .column {
+          width: calc(50% - 1rem);
+        }
+      }
+      .hide-mobile {
+        display: block;
+      }
+      .hide-tablet {
+        display: none;
       }
     }
   }

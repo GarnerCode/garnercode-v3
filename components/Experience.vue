@@ -28,6 +28,8 @@
         #experience {
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 1.25s forwards;
+            position: relative;
+            z-index: 6;
             .experience-panel {
                 background: var(--color-panel);
                 color: var(--color-text);
@@ -110,7 +112,7 @@
     }
     @media screen and (min-width: 768px) {
         #experience {
-            width: calc(50% - 0.5rem);
+            width: 100%;
             .experience-panel {
                 margin-right: 0;
             }

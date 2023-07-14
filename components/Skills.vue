@@ -60,7 +60,7 @@
     }
     @media screen and (min-width: 768px) {
         #skills {
-            width: calc(50% - 1.5rem);
+            width: 100%;
             margin-top: 1rem;
             margin-left: 1rem;
             section {
