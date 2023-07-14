@@ -4,6 +4,7 @@
         <main>
             <Nuxt/>
         </main>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -25,6 +26,9 @@
         --color-background: black;
         --color-text: #F5F5F7;
         --color-panel: #111111;
+    }
+    html {
+        scroll-behavior: smooth;
     }
     body {
         background-color: var(--color-background);

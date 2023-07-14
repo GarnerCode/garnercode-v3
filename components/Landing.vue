@@ -5,12 +5,12 @@
             <h1>I'm a <span class="highlight">Web Developer</span></h1>
             <p>I bring ideas to life on the web.</p>
         </div>
-        <button class="button button-primary">
-            <div>Contact Me</div>
+        <a href="#contact" class="button button-primary">
+            <div class="button-text">Contact Me</div>
             <div class="icon-container">
                 <font-awesome-icon icon="fa-solid fa-arrow-right" />
             </div>
-        </button>
+        </a>
         <div class="headshot-border headshot-border-top"></div>
         <div class="headshot-border headshot-border-left"></div>
         <div class="headshot-container">
@@ -25,12 +25,12 @@
         width: 222px;
     }
     to {
-        width: 400px;
+        width: 370px;
     }
 }
 @keyframes scaleButtonOut {
     from {
-        width: 400px;
+        width: 370px;
     }
     to {
         width: 222px;
@@ -62,10 +62,16 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
                 gap: 3rem;
                 position: relative;
                 z-index: 6;
                 height: 40px;
+                padding: 0 1rem;
+                text-decoration: none;
+                .button-text {
+                    height: fit-content;
+                }
                 .icon-container {
                     background-color: var(--color-white);
                     width: 40px;
@@ -76,7 +82,6 @@
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    top: -0.5rem;
                     right: -1rem;
                     svg {
                         color: black;

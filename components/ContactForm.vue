@@ -35,6 +35,8 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             position: relative;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 1.75s forwards;
             .panel-border {
                 position: absolute;
                 top: calc(134px - 28px);

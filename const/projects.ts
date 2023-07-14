@@ -24,8 +24,8 @@ export const projects = [
         lightText: false,
     },
     {
-        title: 'Invoicer',
-        description: 'Invoicing web application',
+        title: 'Lorelock',
+        description: 'Dungeons & Dragons campaign management tool',
         image: 'invoicer.webp',
         link: 'https://invoicer-blue.vercel.app/',
         github: 'https://github.com/GarnerCode/invoicer',

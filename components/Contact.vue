@@ -14,6 +14,8 @@
             margin-bottom: 0;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out 1.75s forwards;
         }
     }
     @media screen and (min-width: 768px) {

@@ -14,36 +14,6 @@
                     </g>
                 </svg>
             </div>
-            <div class="nav-links">
-                <div>Home</div>
-                <div>About</div>
-                <div>Portfolio</div>
-                <div>Contact</div>
-                <div class="button button-theme-secondary">Resume</div>
-            </div>
-            <div class="mode-toggle desktop-mode-toggle" @click="emitThemeEvent()">
-                <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
-                    <font-awesome-icon icon="fa-solid fa-sun" />
-                </div>
-                <div class="mode-toggle-button" :class="{'active': userTheme === 'dark-theme'}">
-                    <font-awesome-icon icon="fa-solid fa-moon" />
-                </div>
-            </div>
-            <div class="nav-toggle" @click="navToggled = !navToggled" :class="{'toggled': navToggled}">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-        <div class="nav-overlay" @click="navToggled = false" v-if="navToggled"></div>
-        <div class="nav-menu" v-if="navToggled" :class="{'toggled': navToggled}">
-            <div class="nav-items">
-                <div>Home</div>
-                <div>About</div>
-                <div>Portfolio</div>
-                <div>Contact</div>
-                <div class="button button-theme-secondary">Resume</div>
-            </div>
             <div class="mode-toggle" @click="emitThemeEvent()">
                 <div class="mode-toggle-button" :class="{'active': userTheme === 'light-theme'}">
                     <font-awesome-icon icon="fa-solid fa-sun" />
@@ -52,7 +22,7 @@
                     <font-awesome-icon icon="fa-solid fa-moon" />
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
 </template>
 
@@ -73,10 +43,6 @@
             left: 0;
             width: calc(100vw - 3rem);
             z-index: 10;
-            &.active {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-            }
             .logo {
                 width: 40px;
                 height: 40px;
@@ -95,92 +61,13 @@
                     transition: var(--transition);
                 }
             }
-            .nav-links {
-                display: none;
-            }
-            .desktop-mode-toggle {
-                display: none;
-            }
-            .nav-toggle {
-                background-color: var(--color-text);
-                width: 40px;
-                height: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 3px;
-                border-radius: 100%;
-                cursor: pointer;
-                div {
-                    width: 20px;
-                    height: 3px;
-                    background-color: var(--color-background);
-                    transition: all 0.3s ease;
-                    border-radius: 5px;
-                }
-                &.toggled {
-                    .line1 {
-                        transform: rotate(-45deg) translate(-4px, 3px);
-                    }
-                    .line2 {
-                        opacity: 0;
-                    }
-                    .line3 {
-                        transform: rotate(45deg) translate(-5px, -5px);
-                    }
-                }
-            }
-        }
-        .nav-overlay {
-            position: absolute;
-            z-index: 9;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(5px);
-        }
-        .nav-menu {
-            background-color: var(--color-panel);
-            border-radius: var(--border-radius);
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            margin: 1rem;
-            margin-top: 0;
-            padding: 0.5rem;
-            font-family: var(--font-family-primary);
-            position: absolute;
-            top: calc(1rem + 56px);
-            width: calc(100vw - 3rem);
-            left: 0;
-            z-index: 10;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-            .nav-items {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                div {
-                    font-size: 1.25rem;
-                    padding: 0.5rem 1rem;
-                    &.button {
-                        height: 40px;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
-                }
-            }
         }
         .mode-toggle {
             background-color: var(--color-background);
             border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
         }
         .mode-toggle-button {
             width: 40px;
@@ -195,35 +82,6 @@
             &.active {
                 background-color: var(--color-text);
                 color: var(--color-background);
-            }
-        }
-    }
-    @media screen and (min-width: 768px) {
-        nav {
-            .nav-toggle {
-                display: none;
-            }
-            .nav-links {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 2rem;
-                font-size: 20px;
-                div {
-                    cursor: pointer;
-                }
-                .button {
-                    height: 40px;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-            }
-            .desktop-mode-toggle {
-                display: flex;
-                cursor: pointer;
             }
         }
     }
