@@ -2,6 +2,9 @@
     <section id="contact" class="panel">
         <h2 class="panel-header">Contact</h2>
         <p>If you are interested in working with me, contact me today!</p>
+        <a href="mailto:tyler@garnercode.io">
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+        </a>
     </section>
 </template>
 
@@ -16,6 +19,29 @@
             border-bottom-right-radius: 0;
             opacity: 0;
             animation: fadeInUp 0.5s ease-in-out 1.75s forwards;
+            position: relative;
+            z-index: 6;
+            a {
+                border: 1px solid var(--color-text);
+                width: 40px;
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                color: var(--color-text);
+                transition: var(--transition);
+                position: absolute;
+                top: 0.75rem;
+                right: 0.75rem;
+                &:hover {
+                    background-color: var(--color-text);
+                    border-color: var(--color-text);
+                    color: var(--color-background);
+                    transform: scale(115%);
+                }
+            }
         }
     }
     @media screen and (min-width: 768px) {
@@ -29,6 +55,11 @@
             position: relative;
             width: calc(100% - 1rem);
             height: calc(428px - 289px + 4rem);
+            a {
+                top: calc(100% - 3.25rem);
+                bottom: 0.75rem;
+                left: 0.5rem;
+            }
         }
     }
     @media screen and (min-width: 830px) {
