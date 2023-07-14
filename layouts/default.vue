@@ -17,6 +17,7 @@
         --color-white: #F5F5F7;
         --color-primary: #3959DC;
         --color-secondary: #98B8E7;
+        --color-error: rgb(224, 48, 48);
         --border-radius: 28px;
         --font-family-primary: 'Nunito', sans-serif;
         --font-family-secondary: 'PT Sans', sans-serif;

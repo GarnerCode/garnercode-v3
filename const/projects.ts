@@ -17,18 +17,10 @@ export const projects = [
     },
     {
         title: 'Arch',
-        description: 'Static website for an architecture firm',
+        description: 'Website for an architecture firm',
         image: 'arch.webp',
         link: 'https://arch-olive.vercel.app/',
         github: 'https://github.com/GarnerCode/arch',
         lightText: false,
-    },
-    {
-        title: 'Lorelock',
-        description: 'Dungeons & Dragons campaign management tool',
-        image: 'invoicer.webp',
-        link: 'https://invoicer-blue.vercel.app/',
-        github: 'https://github.com/GarnerCode/invoicer',
-        lightText: true,
     },
 ]

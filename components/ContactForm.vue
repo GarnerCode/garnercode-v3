@@ -1,31 +1,60 @@
 <template>
     <section id="contact-form" class="panel">
         <div class="panel-border"></div>
-        <form>
-            <div class="field">
+        <form @submit="(e) => handleSubmit(e)" action="https://getform.io/f/607da9e8-ff5a-4f71-9905-0979b0840530" method="POST">
+            <div class="field field-name">
                 <div class="label-container">
                     <label for="name">Name</label>
+                    <div class="error" :class="{'active': !formModel.name.valid && formError}">Name is required</div>
                 </div>
-                <input type="text" name="name">
+                <input :class="{'has-error': !formModel.name.valid && formError}" v-model="formModel.name.value" type="text" name="name">
             </div>
-            <div class="field">
+            <div class="field field-email">
                 <div class="label-container">
                     <label for="email">Email</label>
+                    <div class="error" :class="{'active': !formModel.email.valid && formError}">Email is required</div>
                 </div>
-                <input type="email" name="email">
+                <input :class="{'has-error': !formModel.email.valid && formError}" v-model="formModel.email.value" type="email" name="email">
+            </div>
+            <div class="field field-phone">
+                <div class="label-container">
+                    <label for="phone">Phone</label>
+                    <div class="error" :class="{'active': !formModel.phone.valid && formError}">Phone is required</div>
+                </div>
+                <input :class="{'has-error': !formModel.phone.valid && formError}" v-model="formModel.phone.value" type="tel" name="phone">
             </div>
             <div class="field">
                 <div class="label-container">
                     <label for="message">Message</label>
+                    <div class="error" :class="{'active': !formModel.message.valid && formError}">Message is required</div>
                 </div>
-                <textarea name="message"></textarea>
+                <textarea :class="{'has-error': !formModel.message.valid && formError}" v-model="formModel.message.value" name="message"></textarea>
             </div>
-            <button class="button button-primary">Submit</button>
+            <button id="submit-button" class="button button-primary">Submit</button>
         </form>
     </section>
 </template>
 
 <style lang="scss">
+    @keyframes buttonError {
+        0% {
+            color: var(--color-background);
+            background-color: var(--color-error);
+            border-color: var(--color-error);
+            transform: translateX(0px);
+        }
+        25% {
+            transform: translateX(-10px);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+        100% {
+            transform: translateX(0);
+            color: var(--color-background);
+            border-color: var(--color-text);
+        }
+    }
     @media screen and (min-width: 0px) {
         #contact-form {
             background-color: var(--color-panel);
@@ -58,6 +87,20 @@
             .label-container {
                 margin-bottom: 0.75rem;
                 margin-left: 0.75rem;
+                margin-right: 0.75rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .error {
+                    display: none;
+                    &.active {
+                        display: block;
+                        color: var(--color-error);
+                    }
+                }
+            }
+            .field-phone {
+                display: none;
             }
             input, textarea {
                 padding: 0.75rem;
@@ -74,6 +117,9 @@
                     outline: none;
                     border-color: var(--color-text);
                 }
+                &.has-error {
+                    border: 1px solid var(--color-error);
+                }
             }
             button {
                 border: 1px solid var(--color-text);
@@ -84,6 +130,9 @@
                     background-color: var(--color-text);
                     border-color: var(--color-background);
                     color: var(--color-background);
+                }
+                &.button-error {
+                    animation: buttonError 0.5s ease-in-out;
                 }
             }
         }
@@ -131,3 +180,82 @@
         }
     }
 </style>
+
+<script lang="ts">
+    import { defineComponent } from 'vue';
+
+    export default defineComponent({
+        name: 'ContactForm',
+        data: () => {
+            return {
+                formModel: {
+                    name: {
+                        value: '',
+                        valid: false,
+                    },
+                    email: {
+                        value: '',
+                        valid: false,
+                    },
+                    phone: {
+                        value: '',
+                        valid: false,
+                    },
+                    message: {
+                        value: '',
+                        valid: false
+                    }
+                },
+                formError: false,
+            }
+        },
+        methods: {
+            formIsValid(): boolean {
+                this.formError = false;
+
+                if (!this.formModel.name.value.length) {
+                    this.formModel.name.valid = false;
+                    this.formError = true;
+                } else {
+                    this.formModel.name.valid = true;
+                }
+
+                if (!this.formModel.email.value.length) {
+                    this.formModel.email.valid = false;
+                    this.formError = true;
+                } else {
+                    this.formModel.email.valid = true;
+                }
+
+                if (this.formModel.phone.value.length) {
+                    this.formError = true;
+                }
+
+                if (!this.formModel.message.value.length) {
+                    this.formModel.message.valid = false;
+                    this.formError = true;
+                } else {
+                    this.formModel.message.valid = true;
+                }
+
+                if (this.formError) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            buttonErrorAnim(): void {
+                document.getElementById('submit-button')?.classList.add('button-error');
+                setTimeout(function() {
+                    document.getElementById('submit-button')?.classList.remove('button-error');
+                }, 500);
+            },
+            handleSubmit(e: any): void {
+                if (!this.formIsValid()) {
+                    e.preventDefault();
+                    this.buttonErrorAnim();
+                }
+            }
+        }
+    })
+</script>

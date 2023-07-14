@@ -2,7 +2,7 @@
     <section class="panel project-panel" :class="{'light-text': project.lightText}" v-if="project">
         <div class="feature-text">
             <h2>{{ project.title }}</h2>
-            <p>{{ project.description }}</p>
+            <p class="project-description">{{ project.description }}</p>
         </div>
         <img :src="`images/${project.image}`" alt="">
         <div class="project-links">
@@ -44,6 +44,9 @@
                 position: absolute;
                 top: 0.75rem;
                 left: 0.75rem;
+                .project-description {
+                    max-width: 216px;
+                }
             }
             img {
                 width: 100%;
@@ -85,6 +88,15 @@
     @media screen and (min-width: 768px) {
         .project-panel {
             width: calc(50% - 0.5rem);
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .project-panel {
+            .feature-text {
+                .project-description {
+                    max-width: 100%;
+                }
+            }
         }
     }
 </style>
